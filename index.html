@@ -345,6 +345,8 @@
     font-family:var(--mono);font-size:11.5px;letter-spacing:.1em;color:var(--muted);text-transform:uppercase}
   footer a{transition:color .25s}
   footer a:hover{color:var(--volt)}
+  .views{display:inline-flex;align-items:center;gap:10px}
+  .views-badge{height:20px;border-radius:4px;display:block}
 
   /* ---------- reveal on scroll ---------- */
   [data-reveal]{opacity:0;transform:translateY(30px);transition:opacity .8s var(--ease),transform .8s var(--ease);transition-delay:var(--d,0ms)}
@@ -594,9 +596,32 @@
 
 <footer>
   <span>© 2026 Hazem Ben Alaya — Tunis, Tunisia</span>
+  <span class="views">VIEWS
+    <img class="views-badge"
+         src="https://hits.seeyoufarm.com/api/count/incr/badge.svg?url=https%3A%2F%2Fhazemba20.github.io&amp;count_bg=%23CDFF3D&amp;title_bg=%23131316&amp;title_color=%23A6A6A0&amp;count_color=%230B0B0C&amp;title=views&amp;edge_flat=true"
+         alt="Visitor count" loading="lazy" referrerpolicy="no-referrer">
+  </span>
   <span>Designed &amp; built from scratch · no templates</span>
   <a href="#top">Back to top ↑</a>
 </footer>
+
+<script>
+/* ── Google Analytics 4 ──────────────────────────────────────────────
+   Paste your GA4 Measurement ID between the quotes (looks like
+   "G-XXXXXXXXXX"). Get one at analytics.google.com → Admin →
+   Data streams → Web → your site. Left empty, analytics stays off. */
+var GA_MEASUREMENT_ID = "";
+if (GA_MEASUREMENT_ID) {
+  var gaScript = document.createElement('script');
+  gaScript.async = true;
+  gaScript.src = 'https://www.googletagmanager.com/gtag/js?id=' + GA_MEASUREMENT_ID;
+  document.head.appendChild(gaScript);
+  window.dataLayer = window.dataLayer || [];
+  window.gtag = function(){ window.dataLayer.push(arguments); };
+  gtag('js', new Date());
+  gtag('config', GA_MEASUREMENT_ID);
+}
+</script>
 
 <script>
 (function(){
